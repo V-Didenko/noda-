@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторна робота №5</title>
+    <SCRIPT>
+        function checkNumber(number) {
+            if (/\d{10}/.test(number)) {
+                alert('Valid')
+            } else {
+                alert('Not valid')
+            }
+        }
+
+        function checkName(number) {
+            if (/^[a-zA-Z ]+$/.test(number)) {
+                alert('Valid')
+            } else {
+                alert('Not valid')
+            }
+        }
+
+        function checkEmail(number) {
+            if (/^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/
+                .test(number)) {
+                alert('Valid')
+            } else {
+                alert('Not valid')
+            }
+        }
+        //-->
+    </SCRIPT>
+</head>
+
+<body>
+    <form>Номер:
+        <input type="text" name="telephone" value="">
+        <input type="button" value="Перевірити" onClick="checkNumber(this.form.telephone.value)">
+        Name
+        <input type="text" name="name" value="">
+        <input type="button" value="Перевірити" onClick="checkName(this.form.name.value)">
+        Email
+        <input type="text" name="email" value="">
+        <input type="button" value="Перевірити" onClick="checkEmail(this.form.email.value)">
+    </form>
+</body>
+
+</html>
